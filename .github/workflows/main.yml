@@ -1,27 +1,19 @@
-name: CI Pipline
+name: Simple CI
 
 on:
   push:
-    braches:        # ❌ typo: should be "branches"
+    branches:
       - main
 
 jobs:
-  bulid:            # ❌ typo: should be "build"
-    runs-on: ubuntu-latest   # ❌ typo: ubuntu-latest
+  hello:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Chekout code
-        uses: actions/chekout@v4   # ❌ typo: checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up Pythn
-        uses: actions/setup-pythn@v4   # ❌ typo
-        with:
-          python-verion: "3.10"        # ❌ typo
-
-      - name: Install dependecies
-        run: |
-          pip instal -r requirements.txt   # ❌ typo: install
-
-      - name: Run tests
-        run: |
-          pytestt                           # ❌ typo
+      - name: Say Hello
+        run: eko "GitHub Actions is working!"
+      - name: Say Hello
+        run: emo "GitHub Actions is working!"
