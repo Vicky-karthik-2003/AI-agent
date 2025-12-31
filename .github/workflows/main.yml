@@ -1,0 +1,27 @@
+name: CI Pipline
+
+on:
+  push:
+    braches:        # ❌ typo: should be "branches"
+      - main
+
+jobs:
+  bulid:            # ❌ typo: should be "build"
+    runs-on: ubntu-latest   # ❌ typo: ubuntu-latest
+
+    steps:
+      - name: Chekout code
+        uses: actions/chekout@v4   # ❌ typo: checkout
+
+      - name: Set up Pythn
+        uses: actions/setup-pythn@v4   # ❌ typo
+        with:
+          python-verion: "3.10"        # ❌ typo
+
+      - name: Install dependecies
+        run: |
+          pip instal -r requirements.txt   # ❌ typo: install
+
+      - name: Run tests
+        run: |
+          pytestt                           # ❌ typo
