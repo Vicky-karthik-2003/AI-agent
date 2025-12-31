@@ -7,7 +7,7 @@ on:
 
 jobs:
   bulid:            # ❌ typo: should be "build"
-    runs-on: ubntu-latest   # ❌ typo: ubuntu-latest
+    runs-on: ubuntu-latest   # ❌ typo: ubuntu-latest
 
     steps:
       - name: Chekout code
